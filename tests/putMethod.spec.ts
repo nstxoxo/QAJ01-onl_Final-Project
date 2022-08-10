@@ -1,6 +1,6 @@
 import superagent from "superagent";
 import { expectedObjPut } from "../objects/objectsPut";
-import { postN } from "../constans/titles";
+import { postN, contType, application, success } from "../constans/titles";
 import { BASIC_URL } from "../constans/url";
 
 describe("API testing. PUT method", () => {
@@ -9,12 +9,12 @@ describe("API testing. PUT method", () => {
     try {
       res = await superagent
         .put(BASIC_URL + postN)
-        .send({ title: "James", body: "Amor tussisque non celantur" })
-        .set("Content-Type", "application/json");
+        .send(expectedObjPut.firstObject)
+        .set(contType, application);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(200);
+    expect(res.status).toEqual(success);
     expect(res.body.title).toEqual(expectedObjPut.firstObject.title);
     expect(res.body.body).toEqual(expectedObjPut.firstObject.body);
   });
@@ -24,12 +24,12 @@ describe("API testing. PUT method", () => {
     try {
       res = await superagent
         .put(BASIC_URL + postN)
-        .send({ email: "jhol@akk.ru", body: "Audacia pro muro habetur" })
-        .set("Content-Type", "application/json");
+        .send(expectedObjPut.secondObject)
+        .set(contType, application);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(200);
+    expect(res.status).toEqual(success);
     expect(res.body.email).toEqual(expectedObjPut.secondObject.email);
     expect(res.body.body).toEqual(expectedObjPut.secondObject.body);
   });
@@ -38,12 +38,12 @@ describe("API testing. PUT method", () => {
     try {
       res = await superagent
         .put(BASIC_URL + postN)
-        .send({ name: "Kevin", job: "Developer" })
-        .set("Content-Type", "application/json");
+        .send(expectedObjPut.thirdObject)
+        .set(contType, application);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(200);
+    expect(res.status).toEqual(success);
     expect(res.body.name).toEqual(expectedObjPut.thirdObject.name);
     expect(res.body.job).toEqual(expectedObjPut.thirdObject.job);
   });
@@ -53,12 +53,12 @@ describe("API testing. PUT method", () => {
     try {
       res = await superagent
         .put(BASIC_URL + postN)
-        .send({ title: "Abiens abi", body: "Dies diem docet" })
-        .set("Content-Type", "application/json");
+        .send(expectedObjPut.fourthObject)
+        .set(contType, application);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(200);
+    expect(res.status).toEqual(success);
     expect(res.body.title).toEqual(expectedObjPut.fourthObject.title);
     expect(res.body.body).toEqual(expectedObjPut.fourthObject.body);
   });

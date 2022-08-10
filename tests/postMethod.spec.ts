@@ -1,6 +1,6 @@
 import superagent from "superagent";
 import { expectedObjPost } from "../objects/objectsPost";
-import { posts } from "../constans/titles";
+import { contType, posts, application } from "../constans/titles";
 import { BASIC_URL } from "../constans/url";
 
 describe("API testing. POST method", () => {
@@ -9,8 +9,8 @@ describe("API testing. POST method", () => {
     try {
       res = await superagent
         .post(BASIC_URL + posts)
-        .set("Content-Type", "application/json")
-        .send({ email: "Thol@ako.ty", body: "Audacia pro muro habetur" });
+        .set(contType, application)
+        .send(expectedObjPost.secondObject);
     } catch (err: any) {
       console.log(err.message);
     }
@@ -22,8 +22,8 @@ describe("API testing. POST method", () => {
   test("Test POST create 2", async () => {
     const res = await superagent
       .post(BASIC_URL + posts)
-      .set("Content-Type", "application/json")
-      .send({ title: "James", body: "Amor tussisque non celantur" });
+      .set(contType, application)
+      .send(expectedObjPost.firstObject);
     expect(res.statusCode).toEqual(201);
     console.log(res.body);
     expect(res.body.title).toEqual(expectedObjPost.firstObject.title);
@@ -35,8 +35,8 @@ describe("API testing. POST method", () => {
     try {
       res = await superagent
         .post(BASIC_URL + posts)
-        .set("Content-Type", "application/json")
-        .send({ title: "Julius Caesar", body: "Carum est, quod rarum est" });
+        .set(contType, application)
+        .send(expectedObjPost.thirdObject);
     } catch (err: any) {
       console.log(err.message);
     }
@@ -49,8 +49,8 @@ describe("API testing. POST method", () => {
     try {
       res = await superagent
         .post(BASIC_URL + posts)
-        .set("Content-Type", "application/json")
-        .send({ name: "Harry", body: "Acta est fabula" });
+        .set(contType, application)
+        .send(expectedObjPost.fourthObject);
     } catch (err: any) {
       console.log(err.message);
     }

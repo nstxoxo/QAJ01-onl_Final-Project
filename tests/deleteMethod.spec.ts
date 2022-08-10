@@ -1,6 +1,6 @@
 import superagent from "superagent";
 import { BASIC_URL } from "../constans/url";
-import { postN } from "../constans/titles";
+import { postN, success } from "../constans/titles";
 
 describe("API testing. DELETE method", () => {
   test("Test DELETE post", async () => {
@@ -10,6 +10,6 @@ describe("API testing. DELETE method", () => {
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(success);
   });
 });
