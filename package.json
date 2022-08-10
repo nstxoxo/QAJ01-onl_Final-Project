@@ -7,8 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "jest:test": "jest",
-    "cypress:open": "npx cypress open"
+    "jest:test": "jest"
   },
   "repository": {
     "type": "git",
