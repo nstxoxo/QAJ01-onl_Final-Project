@@ -1,5 +1,5 @@
-export const expectedObjGet = {
-  firstObject: [
+export const EXPECTED_OBJ_GET = {
+  expectedResponseForPostId2: [
     {
       userId: 1,
       id: 2,
@@ -8,7 +8,7 @@ export const expectedObjGet = {
     },
   ],
 
-  secondObject: [
+  expectedResponseForPostId5: [
     {
       postId: 1,
       id: 5,

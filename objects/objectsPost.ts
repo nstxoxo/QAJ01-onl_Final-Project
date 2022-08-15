@@ -1,18 +1,18 @@
-export const expectedObjPost = {
-  firstObject: {
+export const EXPECTED_OBJ_POST = {
+  requestForMethodPost1: {
     title: "James",
     body: "Amor tussisque non celantur",
   },
-  secondObject: {
+  requestForMethodPost2: {
     email: "Thol@ako.ty",
     body: "Audacia pro muro habetur",
   },
-  thirdObject: {
+  requestForMethodPost3: {
     title: "Julius Caesar",
     body: "Carum est, quod rarum est",
   },
 
-  fourthObject: {
+  requestForMethodPost4: {
     name: "Harry",
     body: "Acta est fabula",
   },

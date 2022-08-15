@@ -1,20 +1,20 @@
-export const expectedObjPut = {
-  firstObject: {
+export const EXPECTED_OBJ_PUT = {
+  requestForMethodPut1: {
     title: "James",
     body: "Amor tussisque non celantur",
   },
 
-  secondObject: {
+  requestForMethodPut2: {
     email: "jhol@akk.ru",
     body: "Audacia pro muro habetur",
   },
 
-  thirdObject: {
+  requestForMethodPut3: {
     name: "Kevin",
     job: "Developer",
   },
 
-  fourthObject: {
+  requestForMethodPut4: {
     title: "Abiens abi",
     body: "Dies diem docet",
   },

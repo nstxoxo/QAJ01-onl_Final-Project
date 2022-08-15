@@ -1,20 +1,20 @@
-export const expectedObjPatch = {
-  firstObject: {
+export const EXPECTED_OBJ_PATCH = {
+  requestForMethodPatch1: {
     name: "morpheus",
     job: "zion resident",
   },
 
-  secondObject: {
+  requestForMethodPatch2: {
     title: "foo",
     body: "bar",
   },
-  thirdObject: {
+  requestForMethodPatch3: {
     name: "John",
     age: 22,
     gender: "male",
   },
 
-  fourthObject: {
+  requestForMethodPatch4: {
     name: "Molecule Man",
     age: 29,
     secretIdentity: "Dan Jukes",

@@ -1,11 +1,11 @@
-export const posts: string = "posts";
-export const postN: string = "posts/1";
-export const comments: string = "posts/1/comments";
-export const postId: string = "/comments?postId=1";
-export const obj = {
+export const POSTS: string = "posts";
+export const POST_1: string = "posts/1";
+export const COMMENTS_1: string = "posts/1/comments";
+export const POSTID_1: string = "/comments?postId=1";
+export const OBJECT_GET = {
   name: "vero eaque aliquid doloribus et culpa",
 };
-export const contType: string = "Content-Type";
-export const application: string = "application/json";
-export const success: number = 200;
+export const CONTENT_TYPE: string = "Content-Type";
+export const APPLICATION: string = "application/json";
+export const SUCCESS: number = 200;
 

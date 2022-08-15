@@ -1,6 +1,6 @@
 import superagent from "superagent";
-import { expectedObjPut } from "../objects/objectsPut";
-import { postN, contType, application, success } from "../constans/titles";
+import { EXPECTED_OBJ_PUT } from "../objects/objectsPut";
+import { POST_1, CONTENT_TYPE, APPLICATION, SUCCESS } from "../constans/titles";
 import { BASIC_URL } from "../constans/url";
 
 describe("API testing. PUT method", () => {
@@ -8,58 +8,58 @@ describe("API testing. PUT method", () => {
     let res: any;
     try {
       res = await superagent
-        .put(BASIC_URL + postN)
-        .send(expectedObjPut.firstObject)
-        .set(contType, application);
+        .put(BASIC_URL + POST_1)
+        .send(EXPECTED_OBJ_PUT.requestForMethodPut1)
+        .set(CONTENT_TYPE, APPLICATION);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(success);
-    expect(res.body.title).toEqual(expectedObjPut.firstObject.title);
-    expect(res.body.body).toEqual(expectedObjPut.firstObject.body);
+    expect(res.status).toEqual(SUCCESS);
+    expect(res.body.title).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut1.title);
+    expect(res.body.body).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut1.body);
   });
 
   test("Test PUT user 2", async () => {
     let res: any;
     try {
       res = await superagent
-        .put(BASIC_URL + postN)
-        .send(expectedObjPut.secondObject)
-        .set(contType, application);
+        .put(BASIC_URL + POST_1)
+        .send(EXPECTED_OBJ_PUT.requestForMethodPut2)
+        .set(CONTENT_TYPE, APPLICATION);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(success);
-    expect(res.body.email).toEqual(expectedObjPut.secondObject.email);
-    expect(res.body.body).toEqual(expectedObjPut.secondObject.body);
+    expect(res.status).toEqual(SUCCESS);
+    expect(res.body.email).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut2.email);
+    expect(res.body.body).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut2.body);
   });
   test("Test PUT user 3", async () => {
     let res: any;
     try {
       res = await superagent
-        .put(BASIC_URL + postN)
-        .send(expectedObjPut.thirdObject)
-        .set(contType, application);
+        .put(BASIC_URL + POST_1)
+        .send(EXPECTED_OBJ_PUT.requestForMethodPut3)
+        .set(CONTENT_TYPE, APPLICATION);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(success);
-    expect(res.body.name).toEqual(expectedObjPut.thirdObject.name);
-    expect(res.body.job).toEqual(expectedObjPut.thirdObject.job);
+    expect(res.status).toEqual(SUCCESS);
+    expect(res.body.name).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut3.name);
+    expect(res.body.job).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut3.job);
   });
 
   test("Test PUT user 4", async () => {
     let res: any;
     try {
       res = await superagent
-        .put(BASIC_URL + postN)
-        .send(expectedObjPut.fourthObject)
-        .set(contType, application);
+        .put(BASIC_URL + POST_1)
+        .send(EXPECTED_OBJ_PUT.requestForMethodPut4)
+        .set(CONTENT_TYPE, APPLICATION);
     } catch (err: any) {
       console.log(err.message);
     }
-    expect(res.status).toEqual(success);
-    expect(res.body.title).toEqual(expectedObjPut.fourthObject.title);
-    expect(res.body.body).toEqual(expectedObjPut.fourthObject.body);
+    expect(res.status).toEqual(SUCCESS);
+    expect(res.body.title).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut4.title);
+    expect(res.body.body).toEqual(EXPECTED_OBJ_PUT.requestForMethodPut4.body);
   });
 });
